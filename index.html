@@ -1,33 +1,332 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>TTH</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PILDUN 2026</title>
 
 <style>
-body{
-background:black;
-color:white;
-text-align:center;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial;
-margin-top:100px;
 }
 
-.box{
-border:2px solid red;
+body{
+background:#050505;
+color:white;
+}
+
+/* HEADER */
+
+header{
+background:black;
 padding:20px;
-display:inline-block;
-border-radius:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:2px solid red;
+position:sticky;
+top:0;
+z-index:999;
 }
-</style>
 
+.logo{
+font-size:28px;
+font-weight:bold;
+color:red;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-size:15px;
+}
+
+.menu a:hover{
+color:red;
+}
+
+/* HERO */
+
+.hero{
+height:400px;
+background:url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?q=80&w=1600') center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-box{
+background:rgba(0,0,0,0.7);
+padding:30px;
+border-radius:20px;
+border:2px solid red;
+box-shadow:0 0 20px red;
+}
+
+.hero h1{
+font-size:45px;
+color:red;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:red;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:darkred;
+}
+
+/* MATCH */
+
+.section-title{
+text-align:center;
+font-size:32px;
+margin-top:40px;
+color:gold;
+}
+
+.matches{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+padding:20px;
+gap:20px;
+}
+
+.match-card{
+background:#111;
+width:300px;
+padding:20px;
+border-radius:20px;
+border:1px solid red;
+box-shadow:0 0 10px rgba(255,0,0,0.5);
+text-align:center;
+}
+
+.match-card h2{
+margin-bottom:15px;
+color:white;
+}
+
+.team{
+font-size:24px;
+margin:15px 0;
+}
+
+.time{
+color:#00ffcc;
+margin-bottom:15px;
+}
+
+/* TABLE */
+
+.table-box{
+width:90%;
+max-width:700px;
+margin:40px auto;
+background:#111;
+padding:20px;
+border-radius:20px;
+border:1px solid red;
+overflow:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+padding:12px;
+border-bottom:1px solid #333;
+text-align:center;
+}
+
+th{
+color:red;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:50px;
+padding:30px;
+text-align:center;
+background:black;
+border-top:2px solid red;
+color:gray;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:32px;
+}
+
+.menu{
+display:none;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="box">
-<h1>WELCOME TTH 🔥</h1>
-<p>Website berhasil dibuat 😄</p>
+<header>
+
+<div class="logo">
+⚽ PILDUN 2026
 </div>
+
+<div class="menu">
+<a href="#">Beranda</a>
+<a href="#">Jadwal</a>
+<a href="#">Live Score</a>
+<a href="#">Klasemen</a>
+<a href="#">Prediksi</a>
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-box">
+
+<h1>ROAD TO WORLD CUP 2026</h1>
+
+<p>
+Pantau jadwal, prediksi, dan pertandingan terbesar dunia ⚽🔥
+</p>
+
+<a href="#" class="btn">
+MATCH TODAY
+</a>
+
+</div>
+
+</section>
+
+<!-- MATCH -->
+
+<h1 class="section-title">
+🔥 BIG MATCH TODAY 🔥
+</h1>
+
+<section class="matches">
+
+<div class="match-card">
+
+<h2>Quarter Final</h2>
+
+<div class="team">
+🇧🇷 Brazil VS Argentina 🇦🇷
+</div>
+
+<div class="time">
+🕘 22:00 WIB
+</div>
+
+<a href="#" class="btn">
+Prediksi
+</a>
+
+</div>
+
+<div class="match-card">
+
+<h2>Semi Final</h2>
+
+<div class="team">
+🇫🇷 France VS Germany 🇩🇪
+</div>
+
+<div class="time">
+🕘 01:00 WIB
+</div>
+
+<a href="#" class="btn">
+Prediksi
+</a>
+
+</div>
+
+</section>
+
+<!-- TABLE -->
+
+<h1 class="section-title">
+🏆 KLASEMEN
+</h1>
+
+<div class="table-box">
+
+<table>
+
+<tr>
+<th>Team</th>
+<th>Main</th>
+<th>Poin</th>
+</tr>
+
+<tr>
+<td>Brazil</td>
+<td>3</td>
+<td>9</td>
+</tr>
+
+<tr>
+<td>Argentina</td>
+<td>3</td>
+<td>6</td>
+</tr>
+
+<tr>
+<td>France</td>
+<td>3</td>
+<td>4</td>
+</tr>
+
+<tr>
+<td>Germany</td>
+<td>3</td>
+<td>1</td>
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+
+© 2026 PILDUN OFFICIAL WEBSITE
+
+</footer>
 
 </body>
 </html>
