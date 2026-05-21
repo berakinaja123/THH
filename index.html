@@ -1,4 +1,13 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PILDUN 2026</title>
+
+<style>
 
 *{
 margin:0;
@@ -6,14 +15,13 @@ padding:0;
 box-sizing:border-box;
 font-family:Arial;
 }
-  
+
 body{
-background:url('https://i1-e.pinimg.com/736x/b2/7c/9c/b27c9c47846d5e6aa94de006e664fb50.jpg') no-repeat center top fixed;
-background-size:contain;
-background-color:black;
+background:url('https://i1-e.pinimg.com/736x/b2/7c/9c/b27c9c47846d5e6aa94de006e664fb50.jpg') no-repeat center center fixed;
+background-size:cover;
 color:white;
 }
-  
+
 /* HEADER */
 
 header{
@@ -45,51 +53,6 @@ font-size:15px;
 color:red;
 }
 
-/* HERO */
-
-.hero{
-height:400px;
-background:url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?q=80&w=1600') center/cover;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.hero-box{
-background:rgba(0,0,0,0.7);
-padding:30px;
-border-radius:20px;
-border:2px solid red;
-box-shadow:0 0 20px red;
-}
-
-.hero h1{
-font-size:45px;
-color:red;
-margin-bottom:10px;
-}
-
-.hero p{
-font-size:18px;
-margin-bottom:20px;
-}
-
-.btn{
-display:inline-block;
-padding:12px 25px;
-background:red;
-color:white;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
-}
-
-.btn:hover{
-background:darkred;
-}
-
 /* MATCH */
 
 .section-title{
@@ -97,6 +60,7 @@ text-align:center;
 font-size:32px;
 margin-top:40px;
 color:gold;
+text-shadow:0 0 10px black;
 }
 
 .matches{
@@ -108,12 +72,12 @@ gap:20px;
 }
 
 .match-card{
-background:#111;
+background:rgba(0,0,0,0.8);
 width:300px;
 padding:20px;
 border-radius:20px;
 border:1px solid red;
-box-shadow:0 0 10px rgba(255,0,0,0.5);
+box-shadow:0 0 15px red;
 text-align:center;
 }
 
@@ -132,17 +96,32 @@ color:#00ffcc;
 margin-bottom:15px;
 }
 
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:red;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:darkred;
+}
+
 /* TABLE */
 
 .table-box{
 width:90%;
 max-width:700px;
 margin:40px auto;
-background:#111;
+background:rgba(0,0,0,0.8);
 padding:20px;
 border-radius:20px;
 border:1px solid red;
 overflow:auto;
+box-shadow:0 0 15px red;
 }
 
 table{
@@ -175,17 +154,22 @@ color:gray;
 
 @media(max-width:768px){
 
-.hero h1{
-font-size:32px;
-}
-
 .menu{
 display:none;
+}
+
+.logo{
+font-size:22px;
+}
+
+.section-title{
+font-size:26px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -205,26 +189,6 @@ display:none;
 </div>
 
 </header>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-box">
-
-<h1>ROAD TO WORLD CUP 2026</h1>
-
-<p>
-Pantau jadwal, prediksi, dan pertandingan terbesar dunia ⚽🔥
-</p>
-
-<a href="#" class="btn">
-MATCH TODAY
-</a>
-
-</div>
-
-</section>
 
 <!-- MATCH -->
 
