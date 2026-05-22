@@ -77,9 +77,15 @@ padding:80px 20px 50px;
 }
 
 .hero h1{
-font-size:65px;
+font-size:70px;
 color:gold;
-text-shadow:0 0 20px black;
+font-weight:bold;
+text-transform:uppercase;
+text-shadow:
+0 0 10px gold,
+0 0 20px orange,
+0 0 40px gold;
+animation:titleGlow 2s infinite alternate;
 }
 
 .hero p{
@@ -322,6 +328,24 @@ transition:0.3s;
 .watch-btn:hover{
 transform:scale(1.08);
 background:white;
+} 
+@keyframes titleGlow{
+
+0%{
+transform:scale(1);
+text-shadow:
+0 0 10px gold,
+0 0 20px orange;
+}
+
+100%{
+transform:scale(1.03);
+text-shadow:
+0 0 20px gold,
+0 0 40px orange,
+0 0 60px gold;
+}
+
 }  
 </style>
 
