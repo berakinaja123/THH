@@ -418,13 +418,25 @@ gap:35px;
 }
 
 .side-left{
+position:fixed;
 left:20px;
-top:120px;
+top:50%;
+transform:translateY(-50%);
+display:flex;
+flex-direction:column;
+gap:35px;
+z-index:999;
 }
 
 .side-right{
+position:fixed;
 right:20px;
-top:350px;
+top:50%;
+transform:translateY(-50%);
+display:flex;
+flex-direction:column;
+gap:35px;
+z-index:999;
 }
 
 .side-left a,
