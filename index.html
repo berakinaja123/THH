@@ -124,6 +124,7 @@ margin-top:60px;
 margin-bottom:30px;
 color:gold;
 text-shadow:0 0 10px black;
+animation: glow 2s infinite;
 }
 
 /* MATCH */
@@ -247,7 +248,24 @@ font-size:30px;
 }
 
 }
+@keyframes glow{
 
+0%{
+transform:scale(1);
+text-shadow:0 0 10px gold;
+}
+
+50%{
+transform:scale(1.05);
+text-shadow:0 0 25px orange;
+}
+
+100%{
+transform:scale(1);
+text-shadow:0 0 10px gold;
+}
+
+}
 </style>
 
 </head>
@@ -405,7 +423,7 @@ Prediksi
 </footer>
 
 <script>
-
+  
 const targetDate = new Date("Jun 11, 2026 00:00:00").getTime();
 
 setInterval(function(){
