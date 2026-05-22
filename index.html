@@ -407,42 +407,60 @@ border-top:1px solid rgba(255,255,255,0.08);
 }
 
 .float-btn{
+
+.side-left,
+.side-right{
 position:fixed;
-background:gold;
-color:black;
-padding:12px 18px;
-border-radius:15px;
-font-weight:bold;
-text-decoration:none;
-box-shadow:0 0 15px gold;
 z-index:999;
-transition:0.3s;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.side-left{
+left:15px;
+top:180px;
+}
+
+.side-right{
+right:15px;
+top:300px;
+}
+
+.side-left a,
+.side-right a{
+text-decoration:none;
+text-align:center;
+color:white;
 font-size:14px;
+font-weight:bold;
 }
 
-.float-btn:hover{
-transform:scale(1.08);
-background:white;
+.side-left img,
+.side-right img{
+width:70px;
+height:70px;
+border-radius:50%;
+background:rgba(0,0,0,0.6);
+padding:8px;
+border:2px solid gold;
+box-shadow:0 0 15px gold;
+transition:0.3s;
+animation:floatIcon 2s infinite alternate;
 }
 
-.left-top{
-top:120px;
-left:15px;
+.side-left img:hover,
+.side-right img:hover{
+transform:scale(1.1);
 }
 
-.right-top{
-top:120px;
-right:15px;
+@keyframes floatIcon{
+0%{
+transform:translateY(0px);
 }
-
-.left-bottom{
-bottom:40px;
-left:15px;
+100%{
+transform:translateY(-8px);
 }
-
-.right-bottom{
-bottom:40px;
-right:15px;
 }
   
 </style>
@@ -450,28 +468,34 @@ right:15px;
 </head>
 
 <body>
+<div class="side-left">
 
-<a href="https://click-lynk.com/TELEGRAM_OFFCIAL_CLICKBET88WL" class="float-btn left-top">
-📢 TELEGRAM
+<a href="https://click-lynk.com/WHATSAPP_OFFICIAL_CLICKBET88WL">
+<img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png">
+<span>WhatsApp</span>
 </a>
 
-<a href="https://click-lynk.com/WHATSAPP_OFFICIAL_CLICKBET88WL" class="float-btn right-top">
-💬 WHATSAPP
+<a href="https://click-lynk.com/TELEGRAM_OFFCIAL_CLICKBET88WL">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+<span>Telegram</span>
 </a>
 
-<a href="https://click-lynk.com/LIVECHAT_CLICKBET88WL" class="float-btn left-bottom">
-🎮 LIVE CHAT
+<a href="https://click-lynk.com/CLICKBET88_WL">
+<img src="https://cdn-icons-png.flaticon.com/512/1828/1828506.png">
+<span>Link Masuk</span>
 </a>
 
-<a href="https://click-lynk.com/CLICKBET88_WL" class="float-btn right-bottom">
-🔗 LINK MASUK
-</a>
-<header>
-
-<div class="logo">
-<img src="https://clickbet88sedekahrejeki05.xyz/storage/webpersonalize/d54f5304-03b3-49f7-b283-e6fe0c595ca7.gif">
 </div>
 
+<div class="side-right">
+
+<a href="https://click-lynk.com/LIVECHAT_CLICKBET88WL">
+<img src="https://cdn-icons-png.flaticon.com/512/5962/5962463.png">
+<span>Live Chat</span>
+</a>
+
+</div>
+  
 <div class="menu">
 <a href="#">Beranda</a>
 <a href="#">Jadwal</a>
