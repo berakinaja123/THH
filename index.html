@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 
-<meta charset="UTF-8">    
+<meta charset="UTF-8">      
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PILDUN 2026</title>
@@ -569,76 +569,79 @@ Pantau jadwal, klasemen, dan pertandingan terbesar dunia ⚽🔥
 🔥 BIG MATCH TODAY 🔥
 </h1>
 
-<section class="matches">
-
-<div class="match-card">
-
-<h2>Quarter Final</h2>
-
-<div class="team-flags">
-
-<div>
-<img src="https://flagcdn.com/w80/br.png">
-<p>Brazil</p>
-</div>
-
-<h1>VS</h1>
-
-<div>
-<img src="https://flagcdn.com/w80/ar.png">
-<p>Argentina</p>
-</div>
-
-</div>
-
-<span class="match-time">
-📅 11 Juni 2026<br>
-🕘 22:00 WIB
-</span>
-<a href="#" class="watch-btn">
-🔥 Prediksi Match
-</a>  
-</div>
-
-</div>
-
-</div>
-
-<div class="match-card">
-
-<h2>Semi Final</h2>
-
-<div class="team-flags">
-
-<div>
-<img src="https://flagcdn.com/w80/fr.png">
-<p>France</p>
-</div>
-
-<h1>VS</h1>
-
-<div>
-<img src="https://flagcdn.com/w80/de.png">
-<p>Germany</p>
-</div>
-
-</div>
-  
-<span class="match-time">
-📅 12 Juni 2026<br>
-🕘 01:00 WIB
-</span>
- <a href="#" class="watch-btn">
-🔥 Prediksi Match
-</a> 
-</div>
-
-</div>
-
-</div>
+<section class="matches" id="matchContainer">
 
 </section>
 
+<script>
+
+const matches = [
+
+{
+stage:"Quarter Final",
+home:"Brazil",
+away:"Argentina",
+homeFlag:"https://flagcdn.com/w80/br.png",
+awayFlag:"https://flagcdn.com/w80/ar.png",
+date:"11 Juni 2026",
+time:"22:00 WIB"
+},
+
+{
+stage:"Semi Final",
+home:"France",
+away:"Germany",
+homeFlag:"https://flagcdn.com/w80/fr.png",
+awayFlag:"https://flagcdn.com/w80/de.png",
+date:"12 Juni 2026",
+time:"01:00 WIB"
+}
+
+];
+
+const container = document.getElementById("matchContainer");
+
+matches.forEach(match => {
+
+container.innerHTML += `
+
+<div class="match-card">
+
+<h2>${match.stage}</h2>
+
+<div class="team-flags">
+
+<div>
+<img src="${match.homeFlag}">
+<p>${match.home}</p>
+</div>
+
+<h1>VS</h1>
+
+<div>
+<img src="${match.awayFlag}">
+<p>${match.away}</p>
+</div>
+
+</div>
+
+<span class="match-time">
+📅 ${match.date}<br>
+🕒 ${match.time}
+</span>
+
+<a href="#" class="watch-btn">
+🔥 Prediksi Match
+</a>
+
+</div>
+
+`;
+
+});
+
+</script>
+  
 <!-- TABLE -->
 
 <h1 class="section-title">
