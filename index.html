@@ -280,25 +280,18 @@ font-size:30px;
 Pantau jadwal, klasemen, dan pertandingan terbesar dunia ⚽🔥
 </p>
 
-<div class="countdown">
-
 <div class="box">
-<h2>20</h2>
-<span>Hari</span>
-</div>
-
-<div class="box">
-<h2>12</h2>
+<h2 id="hours">00</h2>
 <span>Jam</span>
 </div>
 
 <div class="box">
-<h2>45</h2>
+<h2 id="minutes">00</h2>
 <span>Menit</span>
 </div>
 
 <div class="box">
-<h2>30</h2>
+<h2 id="seconds">00</h2>
 <span>Detik</span>
 </div>
 
@@ -409,3 +402,26 @@ Prediksi
 
 </body>
 </html>
+<script>
+
+const targetDate = new Date("Jun 11, 2026 00:00:00").getTime();
+
+setInterval(function(){
+
+const now = new Date().getTime();
+
+const distance = targetDate - now;
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+</script>
