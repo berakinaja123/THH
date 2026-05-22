@@ -272,9 +272,10 @@ text-shadow:0 0 10px gold;
 }.team-flags{
 display:flex;
 justify-content:center;
-align-items:center;
+align-items:flex-start;
 gap:20px;
 margin:20px 0;
+text-align:center;
 }
 
 .team-flags img{
@@ -282,6 +283,12 @@ width:70px;
 border-radius:8px;
 }
 
+.team-flags div{
+display:flex;
+flex-direction:column;
+align-items:center;
+}  
+  
 .team-flags h1{
 font-size:35px;
 color:white;
