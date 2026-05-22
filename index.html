@@ -346,6 +346,26 @@ text-shadow:
 0 0 60px gold;
 }
 
+}
+.groups{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.group-card{
+background:rgba(0,0,0,0.7);
+border:1px solid #2f5cff;
+border-radius:15px;
+padding:15px;
+backdrop-filter:blur(8px);
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+}
+
+.group-card h2{
+margin-bottom:15px;
+color:white;
 }  
 </style>
 
@@ -486,46 +506,85 @@ Pantau jadwal, klasemen, dan pertandingan terbesar dunia ⚽🔥
 🏆 KLASEMEN GROUP
 </h1>
 
-<div class="table-box">
+<div class="groups">
+
+<div class="group-card">
+<h2>Group A</h2>
 
 <table>
 
 <tr>
-<th>Team</th>
-<th>Main</th>
-<th>Menang</th>
-<th>Poin</th>
+<th>POS</th>
+<th>TEAM</th>
+<th>PTS</th>
 </tr>
 
 <tr>
+<td>1</td>
 <td>🇧🇷 Brazil</td>
-<td>3</td>
-<td>3</td>
 <td>9</td>
 </tr>
 
 <tr>
-<td>🇦🇷 Argentina</td>
-<td>3</td>
 <td>2</td>
+<td>🇦🇷 Argentina</td>
 <td>6</td>
 </tr>
 
 <tr>
-<td>France</td>
 <td>3</td>
-<td>1</td>
+<td>🇫🇷 France</td>
 <td>4</td>
 </tr>
 
 <tr>
-<td>Germany</td>
-<td>3</td>
-<td>0</td>
+<td>4</td>
+<td>🇩🇪 Germany</td>
 <td>1</td>
 </tr>
 
 </table>
+</div>
+
+</div>
+
+<div class="group-card">
+<h2>Group B</h2>
+
+<table>
+
+<tr>
+<th>POS</th>
+<th>TEAM</th>
+<th>PTS</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>🇵🇹 Portugal</td>
+<td>9</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>🇪🇸 Spain</td>
+<td>6</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>🇧🇪 Belgium</td>
+<td>4</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>🇳🇱 Netherlands</td>
+<td>1</td>
+</tr>
+
+</table>
+</div>
 
 </div>
 
