@@ -754,38 +754,18 @@ container.innerHTML += `
 <th>PTS</th>
 </tr>
 
-<tr>
-<td>0</td>
-<td><img src="https://flagcdn.com/w40/mx.png"> Mexico</td>
-<td>0</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td><img src="https://flagcdn.com/w40/za.png"> South Africa</td>
-<td>0</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td><img src="https://flagcdn.com/w40/kr.png"> South Korea</td>
-<td>0</td>
-</tr>
-
-<tr>
-<td>0</td>
-<td><img src="https://flagcdn.com/w40/cz.png"> Czechia</td>
-<td>0</td>
-</tr>
+<tbody id="groupA"></tbody>
 
 </table>
+
 </div>
 
 <div class="group-card">
+
 <h2>Group B</h2>
 
 <table>
-
+  
 <tr>
 <th>POS</th>
 <th>TEAM</th>
@@ -793,14 +773,14 @@ container.innerHTML += `
 </tr>
 
 <tr>
-<td>0</td>
-<td><img src="https://flagcdn.com/w40/ca.png"> Canada</td>
+<td>1</td>
+<td>Canada</td>
 <td>0</td>
 </tr>
 
 <tr>
 <td>2</td>
-<td><img src="https://flagcdn.com/w40/ba.png"> Bosnia-Herzegovina</td>
+<td>Bosnia</td>
 <td>0</td>
 </tr>
 
@@ -811,7 +791,7 @@ container.innerHTML += `
 </tr>
 
 <tr>
-<td>0</td>
+<td>4</td>
 <td><img src="https://flagcdn.com/w40/ch.png"> Switzerland</td>
 <td>0</td>
 </tr>
@@ -1231,6 +1211,7 @@ container.innerHTML += `
 
 </footer>
 
+  
 <script>
   
 const targetDate = new Date("Jun 11, 2026 00:00:00").getTime();
@@ -1253,6 +1234,57 @@ document.getElementById("seconds").innerHTML = seconds;
 
 },1000);
 
+const groupA = [
+
+{
+team:"Mexico",
+flag:"mx",
+pts:0
+},
+
+{
+team:"South Africa",
+flag:"za",
+pts:0
+},
+
+{
+team:"South Korea",
+flag:"kr",
+pts:0
+},
+
+{
+team:"Czechia",
+flag:"cz",
+pts:0
+}
+
+];
+
+const tableA = document.getElementById("groupA");
+
+groupA.forEach((team,index)=>{
+
+tableA.innerHTML += `
+
+<tr>
+
+<td>${index+1}</td>
+
+<td>
+<img src="https://flagcdn.com/w40/${team.flag}.png">
+${team.team}
+</td>
+
+<td>${team.pts}</td>
+
+</tr>
+
+`;
+
+});
+  
 </script>
 
 <style>
@@ -1301,6 +1333,7 @@ transform:translateY(0px);
 transform:translateY(-10px);
 }
 
+}
 </style>
   
 </body>
