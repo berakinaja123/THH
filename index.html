@@ -10,6 +10,52 @@
   
 <style>
 
+.score-predict{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+margin-top:15px;
+}
+
+.score-predict input{
+width:55px;
+height:55px;
+text-align:center;
+font-size:24px;
+font-weight:bold;
+border:none;
+border-radius:12px;
+background:black;
+color:gold;
+border:2px solid gold;
+box-shadow:0 0 10px rgba(255,215,0,0.4);
+}
+
+.event-prize{
+margin-top:12px;
+color:#00ffcc;
+font-weight:bold;
+font-size:16px;
+}
+
+.event-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 24px;
+background:gold;
+color:black;
+font-weight:bold;
+border-radius:30px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.event-btn:hover{
+transform:scale(1.05);
+background:white;
+
+  
 *{
 margin:0;  
 padding:0;
@@ -654,8 +700,22 @@ container.innerHTML += `
 🕒 ${match.time}
 </span>
 
-<a href="#" class="watch-btn">
-🔥 Prediksi Match
+<p class="event-prize">
+💰 Hadiah Rp 500.000
+</p>
+
+<div class="score-predict">
+
+<input type="number" placeholder="0">
+
+<span>VS</span>
+
+<input type="number" placeholder="0">
+
+</div>
+
+<a href="#" class="event-btn">
+🔥 IKUT TEBAK SKOR
 </a>
 
 </div>
@@ -725,7 +785,7 @@ container.innerHTML += `
 
 <tr>
 <td>1</td>
-<td><img src="https://flagcdn.com/w40/cz.png"> Czechia</td>
+<td><img src="https://flagcdn.com/w40/ca.png"> Canada</td>
 <td>9</td>
 </tr>
 
