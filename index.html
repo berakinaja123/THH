@@ -213,12 +213,23 @@ animation: glow 2s infinite;
 /* MATCH */
 
 .matches{
-display:flex;
-justify-content:center;
-align-items:flex-start;
-gap:30px;
-flex-wrap:wrap;
-padding:20px;
+
+display:grid;
+
+grid-template-columns:repeat(3,minmax(220px,1fr));
+
+gap:20px;
+
+width:100%;
+
+max-width:1000px;
+
+margin:auto;
+
+justify-items:center;
+
+align-items:start;
+
 }
 
 .match-card{
@@ -345,6 +356,8 @@ align-items:center;
 
 @media(max-width:768px){
 
+
+  
 .hero h1{
 font-size:38px;
 line-height:1.2;
@@ -713,6 +726,16 @@ homeFlag:"https://flagcdn.com/w80/fr.png",
 awayFlag:"https://flagcdn.com/w80/de.png",
 date:"12 Juni 2026",
 time:"01:00 WIB"
+},
+
+{
+stage:"Final",
+home:"Spain",
+away:"Portugal",
+homeFlag:"https://flagcdn.com/w80/es.png",
+awayFlag:"https://flagcdn.com/w80/pt.png",
+date:"14 Juni 2026",
+time:"03:00 WIB"
 }
 
 ];
