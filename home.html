@@ -908,6 +908,72 @@ src="https://clickbet88sedekahrejeki05.xyz/storage/webpersonalize/d54f5304-03b3-
 <!-- MATCH -->
 
 <h1 class="section-title">
+📅 JADWAL YANG AKAN DATANG
+</h1>
+
+<section class="matches" id="apiMatches"></section>
+
+<script>
+
+async function loadApiMatches(){
+
+const res = await fetch(
+"https://www.thesportsdb.com/api/v1/json/3/eventsnextleague.php?id=4328"
+);
+
+const data = await res.json();
+
+const container =
+document.getElementById("apiMatches");
+
+container.innerHTML = "";
+
+data.events.slice(0,3).forEach(match=>{
+
+container.innerHTML += `
+
+<div class="match-card">
+
+<h2>LIVE SCHEDULE</h2>
+
+<div class="team-row">
+
+<span class="team-name">
+${match.strHomeTeam}
+</span>
+
+<h1>VS</h1>
+
+<span class="team-name">
+${match.strAwayTeam}
+</span>
+
+</div>
+
+<span class="match-time">
+
+📅 ${match.dateEvent}<br>
+🕒 ${match.strTime}
+
+</span>
+
+<a href="#" class="event-btn">
+🔥 UPCOMING MATCH
+</a>
+
+</div>
+
+`;
+
+});
+
+}
+
+loadApiMatches();
+
+</script>
+  
+<h1 class="section-title">
 🔥BIG MATCH TODAY🔥
 </h1>
 
