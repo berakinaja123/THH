@@ -385,6 +385,75 @@ color:#fff;
   
 /* MOBILE */
 
+.live-bar{
+
+position:sticky;
+top:0;
+z-index:9999;
+
+display:flex;
+justify-content:center;
+  
+align-items:center;
+gap:12px;
+
+padding:12px 20px;
+
+background:rgba(0,0,0,0.85);
+
+backdrop-filter:blur(10px);
+
+border-bottom:2px solid gold;
+
+overflow-x:auto;
+
+}
+
+.live-bar button{
+
+background:black;
+color:gold;
+
+border:1px solid gold;
+
+padding:10px 18px;
+
+border-radius:30px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+white-space:nowrap;
+
+}
+
+.live-title{
+
+background:linear-gradient(90deg,#ff7b00,#ff0066);
+
+padding:10px 25px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+white-space:nowrap;
+
+}
+
+.live-matches{
+
+display:flex;
+gap:20px;
+white-space:nowrap;
+
+font-weight:bold;
+
+color:white;
+
+}
+  
 @media(max-width:768px){
 
 .section-title{
@@ -840,6 +909,26 @@ animation:titleGlow 2s infinite alternate;
 
 <body>
 
+<div class="live-bar">
+
+<button>Hari Ini</button>
+
+<button>Besok</button>
+
+<button>Akan Datang</button>
+
+<div class="live-title">
+🏆 WORLD CUP 2026
+</div>
+
+<div class="live-matches" id="liveMatches">
+
+Loading Match...
+
+</div>
+
+</div>
+  
 <img class="floating-logo"
 src="https://clickbet88sedekahrejeki05.xyz/storage/webpersonalize/d54f5304-03b3-49f7-b283-e6fe0c595ca7.gif">
 
@@ -903,13 +992,7 @@ src="https://clickbet88sedekahrejeki05.xyz/storage/webpersonalize/d54f5304-03b3-
 
 </div>
 
-</section>
 
-<!-- MATCH -->
-
-<h1 class="section-title">
-📅 JADWAL YANG AKAN DATANG
-</h1>
 
 <section class="matches" id="apiMatches"></section>
 
@@ -1708,6 +1791,44 @@ margin-top:-10px;
 
 }
 </style>
+
+<script>
+
+async function loadLiveBar(){
+
+const res = await fetch(
+"https://www.thesportsdb.com/api/v1/json/3/eventsnextleague.php?id=4328"
+);
+
+const data = await res.json();
+
+const container =
+document.getElementById("liveMatches");
+
+container.innerHTML = "";
+
+data.events.slice(0,5).forEach(match=>{
+
+container.innerHTML += `
+
+<span>
+
+${match.strHomeTeam}
+VS
+${match.strAwayTeam}
+
+</span>
+
+`;
+
+});
+
+}
+
+loadLiveBar();
+
+</script>
   
 </body>
 </html>
+
