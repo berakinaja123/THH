@@ -930,12 +930,20 @@ animation:titleGlow 2s infinite alternate;
 
 <div class="live-bar">
 
-<button>Hari Ini</button>
+<button onclick="filterToday()">
+Hari Ini
+</button>
 
-<button>Besok</button>
+<button onclick="filterTomorrow()">
+Besok
+</button>
 
-<button>Akan Datang</button>
+<button onclick="filterUpcoming()">
+Akan Datang
+</button>
 
+
+  
 <div class="live-title">
 🏆 WORLD CUP 2026
 </div>
@@ -1845,6 +1853,28 @@ ${match.strAwayTeam}
 }
 
 loadLiveBar();
+
+</script>
+  
+<script>
+
+function filterToday(){
+
+alert("Menampilkan pertandingan hari ini 😭🔥");
+
+}
+
+function filterTomorrow(){
+
+alert("Menampilkan pertandingan besok 😹");
+
+}
+
+function filterUpcoming(){
+
+alert("Menampilkan semua pertandingan upcoming 🔥");
+
+}
 
 </script>
   
