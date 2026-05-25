@@ -155,20 +155,10 @@ LOGIN
 
 function login(){
 
-const id = document.getElementById("userid").value;
-
-const pw = document.getElementById("password").value;
-
-if(id === "EKIN123" && pw === "12345"){
-
-window.location.href = "https://berakinaja123.github.io/THH/home.html";
-
-}else{
-
-document.getElementById("error").innerHTML =
-"ID ATAU PASSWORD SALAH";
-
-}
+window.open(
+"https://berakinaja123.github.io/THH/home.html",
+"_self"
+);
 
 }
 
