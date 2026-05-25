@@ -113,6 +113,10 @@ font-weight:bold;
 
 cursor:pointer;
 
+display:block;
+text-decoration:none;
+text-align:center;
+  
 }
 
 .error{
@@ -143,23 +147,14 @@ font-weight:bold;
 <input type="password" id="password" placeholder="PASSWORD">
 </div>
 
-<button class="login-btn" id="loginBtn">
+<a href="./home.html" class="login-btn">
 LOGIN
-</button>
+</a>
 
 <p class="error" id="error"></p>
 
 </div>
 
-<script>
-
-document.getElementById("loginBtn").onclick = function(){
-
-location.href = "home.html?v=" + new Date().getTime();
-
-};
-
-</script>
 
 </body>
 </html>
